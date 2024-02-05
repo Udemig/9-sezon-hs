@@ -1,5 +1,5 @@
 //* diğer dsosyalrdan alınan veirler
-import { renderMenuItems } from './scripts/ui.js';
+import { renderMenuItems, renderButtons } from './scripts/ui.js';
 
 const buttonsArea = document.getElementById('buttons');
 
@@ -17,6 +17,9 @@ async function fetchMenu() {
 
 //* sayfa yüklenme olayını  izle
 window.addEventListener('DOMContentLoaded', async () => {
+  // ekrana butonları bas
+  renderButtons('Hepsi');
+
   // verileri çeken fonksiyonu çalıştır
   fetchMenu()
     // fonksiyon başarılı olursa ekrana kartları basan fonksiyonu çalıştır
@@ -27,6 +30,9 @@ window.addEventListener('DOMContentLoaded', async () => {
 buttonsArea.addEventListener('click', (event) => {
   // butona tıklanmadıysa fonksiyonu durdur
   if (event.target.id == 'buttons') return;
+
+  // active olan butonu belirlemek için butonları ekrana terkra bas
+  renderButtons(event.target.innerText);
 
   // filtrelenicek kategori ismini belirle
   const selectedCategory = event.target.dataset.id; // breakfast
