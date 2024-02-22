@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify</title>
     <link
       rel="stylesheet"
@@ -52,7 +49,11 @@
       <!-- üst kısım -->
       <header>
         <form id="search-form">
-          <input type="search" placeholder="şarkı ismi giriniz" />
+          <input
+            name="searchInput"
+            type="search"
+            placeholder="şarkı ismi giriniz"
+          />
           <button>
             <i class="bi bi-search"></i>
           </button>
@@ -64,31 +65,54 @@
           <li>İndirmeler</li>
           <li>Kayıtol</li>
         </ul>
+
+        <!-- KOYU MOD -->
+        <label class="theme-switch">
+          <input
+            id="mode-checkbox"
+            type="checkbox"
+            class="theme-switch__checkbox"
+          />
+          <div class="theme-switch__container">
+            <div class="theme-switch__clouds"></div>
+            <div class="theme-switch__stars-container"></div>
+            <div class="theme-switch__circle-container">
+              <div class="theme-switch__sun-moon-container">
+                <div class="theme-switch__moon">
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </label>
       </header>
 
       <!-- şarkılar -->
       <div class="songs">
         <h2 id="title">Türkiye'de en popüler</h2>
 
-        <div id="list">
-          <!-- kart -->
-          <div class="card">
-            <figure>
-              <img
-                src="https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/36/19/66/36196640-1561-dc5e-c6bc-1e5f4befa583/093624856771.jpg/400x400cc.jpg"
-              />
-              <div id="play">
-                <i id="play-btn" class="bi bi-play-fill"></i>
-              </div>
-            </figure>
-
-            <h4>Teddy Swims</h4>
-            <p>Lose Control</p>
-          </div>
-          <!-- kart -->
-        </div>
+        <div id="list"></div>
       </div>
     </main>
+
+    <!-- oynatma kısmı -->
+    <div class="play-area">
+      <!-- <div>
+        <img
+          class="animate"
+          src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/a7/06/99/a70699f9-2f5a-9198-fe70-6236b534738f/06UMGIM16683.rgb.jpg/400x400cc.jpg"
+        />
+
+        <div>
+          <p>Şuan Oynatılıyor...</p>
+          <h3>Lose Yourself (From "8 Mile")</h3>
+        </div>
+      </div>
+
+      <audio controls src=""></audio> -->
+    </div>
 
     <script type="module" src="main.js"></script>
   </body>
