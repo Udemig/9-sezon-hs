@@ -29,3 +29,22 @@
 4. `npx create-react-app klasor_ismi`: bir react projesi oluşturur.
 
 5. `npm start`: React projesnin ayağa kaldırmaya yarar. Geliştirici modunda çalışır. Terminalin proje klasöründe olduğundan emin olun.
+
+# Çoklu Renderlama
+
+- Birden fazla elemanı ekrana basmak istediğimiz zaman kullandığımız yapı
+
+- Bir dizi içerisndeki eleman sayısı kadar ekernaa basma işlemi yapmak isyiyorsak map yöntemi kullanırız
+
+# Prop (Veri Aktarımı)
+
+- Bir bieleşnden diğerine veri aktarmak iiçn kullandığımız yöntem
+
+- Her zaman üstten aşşğıya doğru üssteki bileşen çocuk bileşene doğru bir veri aktarım yönü vardır
+
+# Koşullı Renderlama (Conditional Rendering)
+
+- Ekrana basılcak olan arayüzün bir koşula göre ekrana gelme durmuna denir.
+
+- - Terneray Operator (? :)
+- eğer yazdığımız koşulun else durmu varsa yani koşul gerçekleşmezsede ekrana bir şey yazdırmak isiyorsak bunu kullanırız

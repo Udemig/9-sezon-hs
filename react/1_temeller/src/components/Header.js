@@ -16,15 +16,29 @@
    
   * 4) Bileşeni farklı dosyalarda kulllanbilmek için export etmeliyiz
 */
+import Button from './Button';
 
 function Header() {
+  // Eğerki kullancı giriş yapmışsa hesap ismi çıkış ve abone ol butonu ekrana gelsin
+  // eğerki kullanıcı hesabına girmemişse o zman giriş yap ve kaydeol butonu ekrana bas
+  const isAuth = true; // api'dan geldğiniş düşünelim
+
   return (
     <header>
       <h1>REACT</h1>
 
       <nav>
-        <p>furkanevin</p>
-        <button className="btn">Çıkış Yap</button>
+        {isAuth === true ? (
+          <>
+            <p>furkanevin</p>
+            <Button title="Çıkış Yap" />
+          </>
+        ) : (
+          <>
+            <Button title="Giriş Yap" color="green" />
+            <Button title="Kayıt Ol" color="blue" />
+          </>
+        )}
       </nav>
     </header>
   );

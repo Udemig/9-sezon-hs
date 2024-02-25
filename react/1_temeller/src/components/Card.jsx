@@ -5,16 +5,19 @@
  * Gönderilen prop verisi bileşnin parametre kısmında alınır.
 
 */
+import Button from './Button';
 
 const Card = (props) => {
   return (
     <div className="card">
-      <img src={props.image} />
+      <img src={props.item.image} />
 
       <div className="body">
-        <h4 className="category">{props.category}</h4>
+        <h4 className="category">{props.item.category}</h4>
 
-        <h3>{props.title}</h3>
+        <h3>{props.item.title}</h3>
+
+        <Button title="Abonbe Ol" color="orange" size={100} />
       </div>
     </div>
   );
