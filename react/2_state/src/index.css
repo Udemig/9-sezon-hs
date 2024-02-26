@@ -8,11 +8,13 @@ body {
   background: rgb(22, 22, 22);
   color: white;
   height: 100vh;
-  display: grid;
-  place-items: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.buton {
+  font-size: 24px;
 }
