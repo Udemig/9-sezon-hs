@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- react'ta iki çeşit component bulunur.
 
-## Available Scripts
+1. Class Components:
 
-In the project directory, you can run:
+- Fuction component'lar ortaya çıkmadan önce kullanılıdır.
+- Modern projelerde yerini function'a bıraktıları
+- Hooks kullanımı mevcut değil.
 
-### `npm start`
+2. Function Component:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Modern projelerde class'lar fazla kod alanı kapladığından class'ın sahip olduğu state , lifecycle vc. özelliklere sahip olmamasına rağmen react hookları sayesinde class'ların bütün özelliklerini fonksiyonlar'da edindiler. Ve daha az ko alanı kapladığı ve daha okunabilir olduğu için günümüzde bir react projesine başlandığı zman her koşulda ilk tercihimiz olucaktır.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Lifecycle (Yaşam Döngüsü)
 
-### `npm test`
+- React bileşeneride normal bir canlı gibi yaşam döngüsüne sahiptir. Bu döngü 3 aşamadan oluşur.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Doğma - Mount (Ekrana Basılma) - componentDidMount()
 
-### `npm run build`
+2. Gelişme - Update (Güncelleneme) - componentDidUpdate()
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Ölme - UnMount (Ekrandan Gitme) - componentWillUnmount()
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Bizim bu yaşam döngüsüne hakim olmamız ve izlyebilmemiz gerekir.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Bileşen ekrana basıldığı ilk anda, bileşen her güncellendiği sırada veya bileşen ekrandan kaldırılırken bu olayları izleyip fonksiyonlar çalıştırmak isteyebilir.
 
-### `npm run eject`
+## Örnekler
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Örneğn bileşen ekrana geldiği ilk anda api isteği atıp verileri almak isteyebiliriz.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Bileşenin tutuğu sayfa state her değitğinde yeni sayfanın içerğinği almak isteyebiliriz.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Bileşen ekrandan gittiği anda sürekli tekrar eden bir işlemi ve bitmeyen bir sayacı durdurmak isteyebiliri.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Class componentlarda yaşam döngüsünü izlememiz sağlayan bazı methodlar mevcut.
 
-## Learn More
+## Not
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Class'ların sahip olduğu ama function'ların sahip olmadığı özellikler için funcların'da bu özellikleri kullanabilmesi için react hook' larını ortaya çıkarıyor
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Class c.'ların sahip oldğu özellikleri function c.'larda kullanmazı sağlar.
 
-### Code Splitting
+- Class c.'larındaki state özelliğini function c.'larında "useState" hookuyla kullanırız.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Class c.'larındaki yaşam döngü özelliklelerini functioon c.'larda "useEffect" hookuyla kullanırız.
 
-### Analyzing the Bundle Size
+# useEffect
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Amacı: class'lardaki componentDidMount | componentDidUpdate | componentWillUnamount yerine function c'larda kullanılır.
 
-### Making a Progressive Web App
+- Fonksiyonel bileşenlerde yaşam döngüsünü izlememizi sağlar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Kullanımlar
 
-### Advanced Configuration
+1. ComponentDidMount: Bileşenin ekrana gelme olayını izlemeye yarar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- - 1.paramatre > çalışacak olan callback function
+- - 2.paramatre > boş bir bağımlılık dizisi
+- - `useEffect(() => {},[])`
 
-### Deployment
+2. ComponentWillUnmount: Bileşnin ekrandan gitmesi olayını izlemeye yarar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- - 1.paramatre > çalışacak olan callback function
+- - 2.paramatre > boş bir bağımlılık dizisi
+- - çalışıcak fonksiyonun return satrına bir fonksiyon daha yazarız bu yazdığımız fonmksiyon bileşen ekranan gidince çalışır
+- - `useEffect(() => { return () => {}},[])`
 
-### `npm run build` fails to minify
+3. ComponentDidUpdate: Bileşen gelen prop veya state her değiştiğinde yani bileşen her render olduğunda çalışan yöntem
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- - 1.parametre > çalışacak olan callback function
+- - 2.parametre yok.
+- - `useEffect(() =>{})`
+
+4. ComponentDidUpdate-2: "Belirledeğimiz" state veya proplar her değiştiğinde çalışır
+
+- - 1.parametre > çalışacak olan callback function
+- - 2.parametre > dolu bağımlılık dizisi
+- - `useEffect(() =>{},[page])`
