@@ -8,9 +8,27 @@
     },
     {
       "id": "asdf2543",
-      "title": "JSON-SERVER Öğren",
+      "title": "Javascript123",
       "status": "job",
       "date": "1/28/2024"
+    },
+    {
+      "id": "702c96f7-7c36-428d-b8a7-deb134bb8d3e",
+      "title": "Typescript",
+      "status": "important",
+      "date": "3/9/2024"
+    },
+    {
+      "id": "1ba3bb9f-3c2a-49b6-80ca-5562bae220da",
+      "title": "CGVDFG",
+      "status": "important",
+      "date": "3/9/2024"
+    },
+    {
+      "id": "2a594552-9ee2-4946-8467-790bc4dc29ee",
+      "title": "Deneme",
+      "status": "daily",
+      "date": "3/9/2024"
     }
   ],
   "users": [

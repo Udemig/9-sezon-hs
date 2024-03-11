@@ -39,3 +39,78 @@
 - npm i json-server
 - proje klasöründe db.json dosysı oluştur ve güncelle
 - package.json'a server'I ayağa kaldırma komutunu ekle
+
+# Axios
+
+- HTTP istekleri için modern çözüm
+- Yerleşik değil pakedini indirmek gerekli
+- isteklerde fetche göre daha az kod yazarız
+- hataları ve istek detaylarını daha detaylı bir şekilde gösterir
+- body kısmında alınan verileri otomatik olarak işler.
+- veri gönderiken otomatk olrak js verisini json verisine çevirir
+- isteği iptal etme özelliği
+- zaman aşımı eklenebilir
+
+## GET İsteği
+
+### Fetch
+
+```js
+fetch('http://localhost:3000/todos')
+  .then((res) => res.json())
+  .then((data) => setTodos(data));
+```
+
+### Axios
+
+```js
+axios.get('http://localhost:3000/todos').then((res) => setTodos(res.data));
+```
+
+## POST İsteği
+
+### Fetch
+
+```js
+fetch('http://localhost:3000/todos', {
+  method: 'POST',
+  body: JSON.stringify(newTodo),
+});
+```
+
+### Axios
+
+```js
+axios.post('http://localhost:3000/todos', newTodo);
+```
+
+## PATCH İsteği
+
+### Fetch
+
+```js
+fetch(`http://localhost:3000/todos/${todo.id}`, {
+  method: 'PATCH',
+  body: JSON.stringify({ title, status }),
+});
+```
+
+### Axios
+
+```js
+
+```
+
+## Get İsteği
+
+### Fetch
+
+```js
+
+```
+
+### Axios
+
+```js
+
+```

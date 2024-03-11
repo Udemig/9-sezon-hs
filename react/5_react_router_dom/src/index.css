@@ -1,0 +1,25 @@
+body {
+  color: rgba(255, 255, 255, 0.87) !important;
+  background-color: #242424 !important;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+a {
+  color: white;
+  padding: 5px;
+  text-decoration: none !important;
+}
+
+.active {
+  background: purple;
+  border-radius: 4px;
+  color: white;
+  box-shadow: 0 0 10px purple;
+}
