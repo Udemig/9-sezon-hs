@@ -64,3 +64,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.btn-wrapper button:first-child {
+  border-radius: 39px 0 0 39px;
+}
+
+.btn-wrapper button:last-child {
+  border-radius: 0 39px 39px 0;
+}
