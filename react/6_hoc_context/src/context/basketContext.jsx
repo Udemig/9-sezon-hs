@@ -1,5 +1,6 @@
 import { useLocalStorage } from '@uidotdev/usehooks';
 import { createContext } from 'react';
+import { toast } from 'react-toastify';
 
 // temel
 export const BasketContext = createContext();
@@ -23,9 +24,13 @@ export const BasketProvider = ({ children }) => {
 
       //c) state'i güncelle
       setBasket(newBasket);
+
+      toast.success(`Ürünün miktarı arttırldı (${updated.amount})`);
     } else {
       //3) ürün septte yoksa > ürünü sepete ekle (miktar 1)
       setBasket(basket.concat({ ...newProduct, amount: 1 }));
+
+      toast.success(`Ürün sepete eklendi`);
     }
   };
 
@@ -35,6 +40,8 @@ export const BasketProvider = ({ children }) => {
     const filtred = basket.filter((i) => i.id !== delete_id);
     // state'i güncelle
     setBasket(filtred);
+
+    toast.error('Ürün sepetten kaldırıldı');
   };
 
   //  miktar azaltan fonksiyon
@@ -52,6 +59,8 @@ export const BasketProvider = ({ children }) => {
 
       //c) state'i güncelle
       setBasket(newBasket);
+
+      toast.info(`Ürünün miktarı azaltıldı (${updated.amount})`);
     } else {
       //3) eğerki miktarı 1 ise > ürünü sepetten kaldır
       removeFromBasket(delete_id);
