@@ -7,3 +7,7 @@
 - millify (sayı formatlama)
 - moment (zaman formatlama)
 - tailwind (stillendirme) (kurulumu sitesinde)
+
+# API
+
+- https://rapidapi.com/ytjar/api/yt-api

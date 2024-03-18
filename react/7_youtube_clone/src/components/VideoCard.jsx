@@ -1,14 +1,17 @@
 import millify from 'millify';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const VideoCard = ({ video }) => {
+const VideoCard = ({ video, isRow }) => {
   const [isHover, setIsHover] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div
+      onClick={() => navigate(`/watch?v=${video.videoId}`)}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      className="cursor-pointer"
+      className={`${isRow ? 'row' : ''} cursor-pointer`}
     >
       {/* resim alanı */}
       <div>
@@ -25,7 +28,7 @@ const VideoCard = ({ video }) => {
       {/* video alt detay alanı */}
       <div className="flex gap-4 mt-5">
         <img
-          className="w-14 h-14 rounded-full"
+          className="c-pic w-14 h-14 rounded-full"
           src={video.channelThumbnail[0].url}
           alt="logo"
         />
@@ -37,7 +40,7 @@ const VideoCard = ({ video }) => {
           <div className="flex gap-3">
             <p className="flex gap-1">
               <span>{millify(video.viewCount)}</span>
-              <span>Görüntülenme</span>
+              <span className="text">Görüntülenme</span>
             </p>
             *<p>{video.publishedTimeText}</p>
           </div>
