@@ -54,3 +54,15 @@
 2. reducer / reducer'ların kurlumunu yap
 3. store'un kurlumunu yap
 4. store'u projeye tanıt
+
+# Proje geliştiştirirken sıklıkla karşılaştığımız hatalar
+
+1. Yapılan güncelleme ekrana yansır ama sayfa yenilenince kaybolur
+
+- - state doğru güncellendi
+- - api yanlış güncellendi
+
+2. Yapılan güncelleme ekrana yansımaz sayfa yenilenince düzelir
+
+- - state yanlış güncellendi
+- - api doğru güncellendi

@@ -1,0 +1,52 @@
+{
+  "todos": [
+    {
+      "id": "7294cc12-d56f-4192-af20-9d669152ef94",
+      "text": "js çalış",
+      "is_done": false,
+      "created_at": "25.03.2024"
+    },
+    {
+      "id": "3d5c3667-e101-40de-985e-efe3596e1a82",
+      "text": "firebase öğren",
+      "is_done": false,
+      "created_at": "25.03.2024"
+    },
+    {
+      "id": "0dfaf6cf-696a-4731-98a6-1af8019cf7f5",
+      "text": "MVC projesi yap",
+      "is_done": true,
+      "created_at": "25.03.2024"
+    },
+    {
+      "id": "bd37d315-9624-428a-a06b-56cc966e2c13",
+      "text": "",
+      "is_done": false,
+      "created_at": "25.03.2024"
+    },
+    {
+      "id": "01430ea1-0e88-4614-ad7a-e931cff1b72f",
+      "text": "",
+      "is_done": false,
+      "created_at": "25.03.2024"
+    },
+    {
+      "id": "2c6315db-830b-403c-bb0a-e001e1cb11fe",
+      "text": "",
+      "is_done": false,
+      "created_at": "25.03.2024"
+    },
+    {
+      "id": "a32c15f5-9fb0-49b9-99f3-792fa8db66f8",
+      "text": "",
+      "is_done": false,
+      "created_at": "25.03.2024"
+    },
+    {
+      "id": "a43ba5f3-c9c7-43ea-888a-72462b9daff3",
+      "text": "asd",
+      "is_done": false,
+      "created_at": "26.03.2024"
+    }
+  ]
+}
