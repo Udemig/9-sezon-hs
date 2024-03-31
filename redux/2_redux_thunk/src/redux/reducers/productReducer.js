@@ -1,3 +1,5 @@
+import ActionTypes from '../actionTypes';
+
 const initialState = {
   isLoading: false,
   error: false,
@@ -6,13 +8,13 @@ const initialState = {
 
 const productReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'SET_LOADING':
+    case ActionTypes.PRODUCT_LOADING:
       return { ...state, isLoading: true };
 
-    case 'SET_ERROR':
+    case ActionTypes.PRODUCT_ERROR:
       return { ...state, isLoading: false, error: action.payload };
 
-    case 'SET_PRODUCTS':
+    case ActionTypes.PRODUCT_SUCCESS:
       return {
         ...state,
         isLoading: false,

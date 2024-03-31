@@ -2,13 +2,16 @@
 import api from '../../utils/api';
 import ActionTypes from '../actionTypes';
 
-export const getRestaurants = () => (dispatch) => {
+export const getRestaurants = (restId) => (dispatch) => {
   dispatch({
     type: ActionTypes.REST_LOADING,
   });
 
+  // param olarak id alırsak 1 restoranı almazsak bütün restoranlara istek atıyoruz
+  const url = restId ? `/restaurants/${restId}` : '/restaurants';
+
   api
-    .get('/restaurants')
+    .get(url)
     .then((res) =>
       dispatch({
         type: ActionTypes.REST_SUCCESS,

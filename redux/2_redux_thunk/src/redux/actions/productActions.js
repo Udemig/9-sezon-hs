@@ -1,34 +1,28 @@
-//! Aksiyon Oluşturan Fonksiyonlar
+// Thunk Aksiyonu
+import api from './../../utils/api';
+import ActionTypes from './../actionTypes';
 
-import axios from 'axios';
-import api from '../../utils/api';
+export const getProducts = (restId) => (dispatch) => {
+  // reducer'a yüklenmenin başladığını bildiryoruz
+  dispatch({
+    type: ActionTypes.PRODUCT_LOADING,
+  });
 
-// 1) Senkron Olanlar
-export const setLoading = () => ({
-  type: 'SET_LOADING',
-});
-
-export const setProducts = (payload) => ({
-  type: 'SET_PRODUCTS',
-  payload,
-});
-
-export const setError = (payload) => ({
-  type: 'SET_ERROR',
-  payload,
-});
-
-// 2) Asenkron Olanlar
-
-//b) restoran göre ürün verilerini alıp store'a aktaran aksiyon
-export const getProducts = () => {
-  // getData fonksiyonu asenkron bir fonksiyonu returne etmeli
-  return (dispatch) => {
-    dispatch(setLoading());
-
-    api
-      .get('/products')
-      .then((res) => dispatch(setProducts(res.data)))
-      .catch((err) => dispatch(setError(err.message)));
-  };
+  // api isteği atılır
+  api
+    .get(`/products?restaurantId=${restId}`)
+    // istek başarılı olursa reducer'a veileri gönderiyoruz
+    .then((res) =>
+      dispatch({
+        type: ActionTypes.PRODUCT_SUCCESS,
+        payload: res.data,
+      })
+    )
+    // istek başarısız olursa reducer'a hata mesajını gönderiyoruz
+    .catch((err) => {
+      dispatch({
+        type: ActionTypes.PRODUCT_ERROR,
+        payload: err.message,
+      });
+    });
 };

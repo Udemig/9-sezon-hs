@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Lezzetin Tadı",
-      "minPrice": 50.0,
+      "minPrice": 50,
       "estimatedDelivery": 45,
       "photo": "https://picsum.photos/400",
       "rating": 4.7,
@@ -12,7 +12,7 @@
     {
       "id": "2",
       "name": "Aromalı Ev",
-      "minPrice": 40.0,
+      "minPrice": 40,
       "estimatedDelivery": 35,
       "photo": "https://picsum.photos/401",
       "rating": 4.5,
@@ -21,7 +21,7 @@
     {
       "id": "3",
       "name": "Lezzet Köşesi",
-      "minPrice": 60.0,
+      "minPrice": 60,
       "estimatedDelivery": 50,
       "photo": "https://picsum.photos/402",
       "rating": 4.8,
@@ -30,7 +30,7 @@
     {
       "id": "4",
       "name": "Keyifli Mekan",
-      "minPrice": 45.0,
+      "minPrice": 45,
       "estimatedDelivery": 40,
       "photo": "https://picsum.photos/403",
       "rating": 4.6,
@@ -39,41 +39,40 @@
     {
       "id": "5",
       "name": "Tadı Damağınızda",
-      "minPrice": 55.0,
+      "minPrice": 55,
       "estimatedDelivery": 55,
       "photo": "https://picsum.photos/404",
       "rating": 4.9,
       "isDeliveryFree": false
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Lezzet Pınarı",
-      "minPrice": 55.0,
+      "minPrice": 55,
       "estimatedDelivery": 40,
       "photo": "https://picsum.photos/405",
       "rating": 4.4,
       "isDeliveryFree": false
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Sağlıklı İstasyon",
-      "minPrice": 60.0,
+      "minPrice": 60,
       "estimatedDelivery": 50,
       "photo": "https://picsum.photos/406",
       "rating": 4.6,
       "isDeliveryFree": true
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Baharatlı Lezzetler",
-      "minPrice": 50.0,
+      "minPrice": 50,
       "estimatedDelivery": 45,
       "photo": "https://picsum.photos/407",
       "rating": 4.7,
       "isDeliveryFree": true
     }
   ],
-
   "products": [
     {
       "id": "1",
@@ -82,7 +81,7 @@
       "category": "Deniz Ürünleri",
       "price": 45.99,
       "rating": 4.8,
-      "photo": "https://ornek.com/izgara_somon.jpg",
+      "photo": "https://picsum.photos/200",
       "restaurantId": "1"
     },
     {
@@ -92,7 +91,7 @@
       "category": "Pizza",
       "price": 12.99,
       "rating": 4.5,
-      "photo": "https://ornek.com/margarita_pizza.jpg",
+      "photo": "https://picsum.photos/201",
       "restaurantId": "2"
     },
     {
@@ -102,7 +101,7 @@
       "category": "Kebaplar",
       "price": 17.99,
       "rating": 4.7,
-      "photo": "https://ornek.com/tavuk_kebabi.jpg",
+      "photo": "https://picsum.photos/203",
       "restaurantId": "1"
     },
     {
@@ -112,7 +111,7 @@
       "category": "Tatlılar",
       "price": 8.99,
       "rating": 4.9,
-      "photo": "https://ornek.com/cikolatali_brownie.jpg",
+      "photo": "https://picsum.photos/203",
       "restaurantId": "3"
     },
     {
@@ -122,7 +121,7 @@
       "category": "Makarnalar",
       "price": 10.99,
       "rating": 4.6,
-      "photo": "https://ornek.com/firin_makarna.jpg",
+      "photo": "https://picsum.photos/204",
       "restaurantId": "4"
     },
     {
@@ -132,7 +131,7 @@
       "category": "Et Yemekleri",
       "price": 22.99,
       "rating": 4.4,
-      "photo": "https://ornek.com/guvecte_et_sote.jpg",
+      "photo": "https://picsum.photos/205",
       "restaurantId": "5"
     },
     {
@@ -142,7 +141,7 @@
       "category": "Tavuk Yemekleri",
       "price": 14.99,
       "rating": 4.7,
-      "photo": "https://ornek.com/firin_tavuk_but.jpg",
+      "photo": "https://picsum.photos/206",
       "restaurantId": "7"
     },
     {
@@ -152,7 +151,7 @@
       "category": "Asya Mutfağı",
       "price": 11.99,
       "rating": 4.6,
-      "photo": "https://ornek.com/sebzeli_noodle.jpg",
+      "photo": "https://picsum.photos/207",
       "restaurantId": "8"
     },
     {
@@ -162,7 +161,7 @@
       "category": "Salatalar",
       "price": 8.49,
       "rating": 4.3,
-      "photo": "https://ornek.com/italyan_salata.jpg",
+      "photo": "https://picsum.photos/208",
       "restaurantId": "3"
     },
     {
@@ -172,7 +171,7 @@
       "category": "Hint Mutfağı",
       "price": 16.99,
       "rating": 4.8,
-      "photo": "https://ornek.com/kori_tavuk.jpg",
+      "photo": "https://picsum.photos/209",
       "restaurantId": "5"
     },
     {
@@ -182,7 +181,7 @@
       "category": "Salatalar",
       "price": 7.99,
       "rating": 4.5,
-      "photo": "https://ornek.com/mevsim_salata.jpg",
+      "photo": "https://picsum.photos/210",
       "restaurantId": "4"
     },
     {
@@ -192,7 +191,7 @@
       "category": "Atıştırmalıklar",
       "price": 9.99,
       "rating": 4.4,
-      "photo": "https://ornek.com/citir_tavuk_kanadi.jpg",
+      "photo": "https://picsum.photos/211",
       "restaurantId": "2"
     },
     {
@@ -202,7 +201,7 @@
       "category": "Pizza",
       "price": 12.99,
       "rating": 4.5,
-      "photo": "https://ornek.com/margarita_pizza.jpg",
+      "photo": "https://picsum.photos/211",
       "restaurantId": "2"
     },
     {
@@ -212,7 +211,7 @@
       "category": "Kebaplar",
       "price": 17.99,
       "rating": 4.7,
-      "photo": "https://ornek.com/tavuk_kebabi.jpg",
+      "photo": "https://picsum.photos/212",
       "restaurantId": "3"
     },
     {
@@ -222,7 +221,7 @@
       "category": "Tatlılar",
       "price": 8.99,
       "rating": 4.9,
-      "photo": "https://ornek.com/cikolatali_brownie.jpg",
+      "photo": "https://picsum.photos/213",
       "restaurantId": "4"
     },
     {
@@ -232,7 +231,7 @@
       "category": "Makarnalar",
       "price": 10.99,
       "rating": 4.6,
-      "photo": "https://ornek.com/firin_makarna.jpg",
+      "photo": "https://picsum.photos/214",
       "restaurantId": "5"
     },
     {
@@ -242,7 +241,7 @@
       "category": "Et Yemekleri",
       "price": 22.99,
       "rating": 4.4,
-      "photo": "https://ornek.com/guvecte_et_sote.jpg",
+      "photo": "https://picsum.photos/215",
       "restaurantId": "6"
     },
     {
@@ -252,7 +251,7 @@
       "category": "Tavuk Yemekleri",
       "price": 14.99,
       "rating": 4.7,
-      "photo": "https://ornek.com/firin_tavuk_but.jpg",
+      "photo": "https://picsum.photos/216",
       "restaurantId": "7"
     },
     {
@@ -262,7 +261,7 @@
       "category": "Asya Mutfağı",
       "price": 11.99,
       "rating": 4.6,
-      "photo": "https://ornek.com/sebzeli_noodle.jpg",
+      "photo": "https://picsum.photos/217",
       "restaurantId": "8"
     },
     {
@@ -272,7 +271,7 @@
       "category": "Salatalar",
       "price": 8.49,
       "rating": 4.3,
-      "photo": "https://ornek.com/italyan_salata.jpg",
+      "photo": "https://picsum.photos/210",
       "restaurantId": "5"
     },
     {
@@ -282,7 +281,7 @@
       "category": "Hint Mutfağı",
       "price": 16.99,
       "rating": 4.8,
-      "photo": "https://ornek.com/kori_tavuk.jpg",
+      "photo": "https://picsum.photos/211",
       "restaurantId": "4"
     },
     {
@@ -292,8 +291,19 @@
       "category": "Salatalar",
       "price": 7.99,
       "rating": 4.5,
-      "photo": "https://ornek.com/mevsim_salata.jpg",
+      "photo": "https://picsum.photos/212",
       "restaurantId": "2"
+    }
+  ],
+  "cart": [
+    {
+      "id": "40d16140-2aaf-4a25-a4d0-e80b6e0ca422",
+      "productId": "1",
+      "title": "Izgara Somon",
+      "price": 45.99,
+      "photo": "https://picsum.photos/200",
+      "restaurantName": "Lezzetin Tadı",
+      "amount": 2
     }
   ]
 }

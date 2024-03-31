@@ -35,6 +35,7 @@ const Main = () => {
         ) : error ? (
           <Error message={error} retry={getData} />
         ) : (
+          restaurants.length > 0 &&
           restaurants.map((item) => (
             <RestaurantCard key={item.id} data={item} />
           ))
