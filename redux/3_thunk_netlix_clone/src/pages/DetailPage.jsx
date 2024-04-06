@@ -6,6 +6,7 @@ import DetailDisplay from '../components/DetailDisplay';
 import Loader from './../components/Loader';
 import millify from 'millify';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import ActorCard from '../components/ActorCard';
 
 const DetailPage = () => {
   const [movie, setMovie] = useState(null);
@@ -83,9 +84,8 @@ const DetailPage = () => {
             </div>
           </div>
 
-          {/*TODO alt kısım */}
           <div>
-            {/* <Splide
+            <Splide
               options={{
                 autoWidth: true,
                 gap: '10px',
@@ -93,16 +93,12 @@ const DetailPage = () => {
                 lazyLoad: true,
               }}
             >
-              {movie.credits.cast.map((actor) => (
+              {movie.credits.cast.map((actor, i) => (
                 <SplideSlide>
-                    <img
-                      className="max-w-[300px] h-full cursor-pointer rounded"
-                      src={baseImgUrl + movie.poster_path}
-                      alt={movie.title}
-                    />
+                  <ActorCard actor={actor} key={i} />
                 </SplideSlide>
               ))}
-            </Splide> */}
+            </Splide>
           </div>
         </div>
       )}
