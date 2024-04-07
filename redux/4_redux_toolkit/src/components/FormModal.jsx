@@ -1,8 +1,8 @@
 import { Modal, Button, Form } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import { addTask } from '../redux/slices/crudSlice';
+import { addTask, editTask } from '../redux/slices/crudSlice';
 
-const FormModal = ({ isOpen, handleClose }) => {
+const FormModal = ({ editItem, isOpen, handleClose }) => {
   const dispatch = useDispatch();
 
   // formun gönderilmesi
@@ -15,8 +15,13 @@ const FormModal = ({ isOpen, handleClose }) => {
     // inputlardaki bilgileri nesneye çevir
     const taskData = Object.fromEntries(formData.entries());
 
-    // reducer'a yeni task'in ekleniceğini haber ver
-    dispatch(addTask(taskData));
+    if (editItem) {
+      // reducer'a güncellenicek elemanı haber ver
+      dispatch(editTask({ id: editItem.id, ...taskData }));
+    } else {
+      // reducer'a yeni task'in ekleniceğini haber ver
+      dispatch(addTask(taskData));
+    }
 
     // modalı kapat
     handleClose();
@@ -25,29 +30,49 @@ const FormModal = ({ isOpen, handleClose }) => {
   return (
     <Modal centered show={isOpen} onHide={handleClose} className="text-black">
       <Modal.Header closeButton>
-        <Modal.Title>Yeni Görev Ekle</Modal.Title>
+        <Modal.Title>
+          {editItem ? 'Görevi Güncelle' : 'Yeni Görev Ekle'}
+        </Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
         <Form onSubmit={handleSubmit} className="d-flex flex-column gap-4">
           <Form.Group>
             <Form.Label>Görev Başlığı:</Form.Label>
-            <Form.Control name="title" placeholder="Navbarı Düzenle" required />
+            <Form.Control
+              name="title"
+              placeholder="Navbarı Düzenle"
+              defaultValue={editItem?.title}
+              required
+            />
           </Form.Group>
 
           <Form.Group>
             <Form.Label>İsminiz:</Form.Label>
-            <Form.Control name="author" required />
+            <Form.Control
+              name="author"
+              defaultValue={editItem?.author}
+              required
+            />
           </Form.Group>
 
           <Form.Group>
             <Form.Label>Atanıcak Kişinin İsmi:</Form.Label>
-            <Form.Control name="assigned_to" required />
+            <Form.Control
+              name="assigned_to"
+              defaultValue={editItem?.assigned_to}
+              required
+            />
           </Form.Group>
 
           <Form.Group>
             <Form.Label>Son Teslim Tarihi:</Form.Label>
-            <Form.Control name="end_date" type="date" required />
+            <Form.Control
+              name="end_date"
+              type="date"
+              defaultValue={editItem?.end_date}
+              required
+            />
           </Form.Group>
 
           {/* Butonlar */}
@@ -56,7 +81,7 @@ const FormModal = ({ isOpen, handleClose }) => {
               İptal
             </Button>
             <Button type="submit" variant="primary">
-              Oluştur
+              {editItem ? 'Kaydet' : 'Oluştur'}
             </Button>
           </Modal.Footer>
         </Form>

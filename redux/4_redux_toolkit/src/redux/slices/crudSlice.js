@@ -56,6 +56,14 @@ const crudSlice = createSlice({
       //b) elemanı sil
       state.tasks.splice(index, 1);
     },
+
+    editTask: (state, action) => {
+      // düzenlenicek elemanın sırasını bul
+      const index = state.tasks.findIndex((i) => i.id === action.payload.id);
+
+      // elemanı güncelle
+      state.tasks.splice(index, 1, action.payload);
+    },
   },
 });
 
@@ -63,4 +71,4 @@ const crudSlice = createSlice({
 export default crudSlice.reducer;
 
 // projede kullanbilmek için aksiyonları export et
-export const { addTask, deleteTask } = crudSlice.actions;
+export const { addTask, deleteTask, editTask } = crudSlice.actions;
