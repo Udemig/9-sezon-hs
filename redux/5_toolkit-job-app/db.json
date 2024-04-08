@@ -1,130 +1,94 @@
 {
   "jobs": [
     {
-      "id": "5",
-      "position": "Product Manager",
-      "company": "Amazon",
-      "location": "Seattle",
-      "status": "Mülakat",
-      "type": "Yarı Zamanlı",
-      "date": "3/10/2024"
-    },
-    {
-      "id": "6",
-      "position": "Data Scientist",
-      "company": "Microsoft",
-      "location": "Redmond",
-      "status": "Devam Ediyor",
-      "type": "Tam Zamanlı",
-      "date": "3/1/2024"
-    },
-    {
-      "id": "7",
-      "position": "Frontend Developer",
-      "company": "Udemig",
-      "location": "İzmir/Bayraklı",
-      "status": "Devam Ediyor",
-      "type": "Tam Zamanlı",
-      "date": "1/17/2021"
-    },
-    {
-      "id": "8",
       "position": "Marketing Manager",
-      "company": "Coca Cola",
-      "location": "İstanbul/Levent",
-      "status": "Mülakat",
-      "type": "Tam Zamanlı",
-      "date": "9/12/2020"
-    },
-    {
-      "id": "9",
-      "position": "Software Tester",
       "company": "IBM",
-      "location": "Ankara/Çankaya",
-      "status": "Devam Ediyor",
-      "type": "Yarı Zamanlı",
-      "date": "3/28/2023"
-    },
-    {
-      "id": "10",
-      "position": "Data Analyst",
-      "company": "Facebook",
       "location": "Menlo Park",
       "status": "Reddedildi",
-      "type": "Uzaktan",
-      "date": "3/28/2023"
-    },
-    {
-      "position": "React Natie",
-      "company": "CGI",
-      "location": "Uzaktan",
-      "status": "Devam Ediyor",
       "type": "Tam Zamanlı",
-      "id": "c5556876-e3f3-4e90-a98a-553864d9aa17",
-      "date": "10/2/2023"
+      "id": "bae91102-6657-4f0e-a84d-82828e352efe",
+      "date": 1712607012428
     },
     {
-      "position": "Frontend",
-      "company": "Udemy",
-      "location": "New York",
-      "status": "Devam Ediyor",
-      "type": "Yarı Zamanlı",
-      "id": "f7547b59-aff1-46a7-8cb7-0fead8f63614",
-      "date": "11/30/2023"
-    },
-    {
-      "position": "Frontend Developer",
-      "company": "Udemig",
-      "location": "New York",
-      "status": "Mülakat",
-      "type": "Staj",
-      "id": "962f4d90-a04c-4806-99f1-4d224c624a7a",
-      "date": "12/5/2023"
-    },
-    {
-      "position": "Frontend Developer",
-      "company": "Udemig",
-      "location": "İzmir/Bayraklı",
-      "status": "Devam Ediyor",
-      "type": "Staj",
-      "id": "034db425-71fe-4e52-9535-4d42433d2c63",
-      "date": "12/24/2023"
-    },
-    {
-      "id": "bd5fae47-950b-41a7-99ce-4a96e6f7d984",
-      "position": "sdf",
-      "company": "sdfsdf",
-      "location": "sdf",
+      "position": "Data Scientist",
+      "company": "IBM",
+      "location": "Seattle",
       "status": "Reddedildi",
       "type": "Yarı Zamanlı",
-      "date": "07.04.2024"
+      "id": "c8f15e11-780d-480f-9327-dcba4dfead68",
+      "date": 1712627032428
     },
     {
-      "id": "7781d6d9-8fb7-40ab-9c65-7558d38258f7",
-      "position": "Web Developer",
-      "company": "Udemig",
-      "location": "İstanbul",
+      "position": "Frontend Developer",
+      "company": "Microsoft",
+      "location": "Redmond",
+      "status": "Reddedildi",
+      "type": "Uzaktan",
+      "id": "d87a9143-58b7-4c65-b0ae-fa18add8c921",
+      "date": 1712307002424
+    },
+    {
+      "position": "Frontend Developer",
+      "company": "IBM",
+      "location": "İzmir/Bayraklı",
       "status": "Devam Ediyor",
       "type": "Tam Zamanlı",
-      "date": "07.04.2024"
+      "id": "96c452ae-88ce-431c-8a7d-144ed6adfc42",
+      "date": 1712643002478
     },
     {
-      "id": "4cf034c3-d7d7-4427-b568-55ed7599e59d",
-      "position": "",
-      "company": "",
-      "location": "",
-      "status": "",
-      "type": "",
-      "date": "07.04.2024"
-    },
-    {
-      "id": "a81e5e74-8840-4214-8928-189ecde37e4a",
-      "position": "retg",
-      "company": "fdg",
-      "location": "dfgdfg",
+      "position": "Data Analyst",
+      "company": "Coca Cola",
+      "location": "Menlo Park",
       "status": "Devam Ediyor",
       "type": "Uzaktan",
-      "date": "07.04.2024"
+      "id": "c1c7f9d1-dcf4-4b51-994f-499f8710f072",
+      "date": 1714602002418
+    },
+    {
+      "position": "Product Manager",
+      "company": "Udemig",
+      "location": "Redmond",
+      "status": "Reddedildi",
+      "type": "Yarı Zamanlı",
+      "id": "6b94a2d3-0571-412b-81e0-910d99a2f057",
+      "date": 1712607002328
+    },
+    {
+      "position": "Product Manager",
+      "company": "IBM",
+      "location": "Redmond",
+      "status": "Devam Ediyor",
+      "type": "Yarı Zamanlı",
+      "id": "5fb295d4-ffe7-48a0-bf1b-a6e4e95020d3",
+      "date": 1716607002428
+    },
+    {
+      "position": "Marketing Manager",
+      "company": "Microsoft",
+      "location": "Seattle",
+      "status": "Reddedildi",
+      "type": "Yarı Zamanlı",
+      "id": "d7c4d757-4957-488d-a7f2-f8db05aa2c46",
+      "date": 1318607013502
+    },
+    {
+      "position": "Data Scientist",
+      "company": "Microsoft",
+      "location": "Menlo Park",
+      "status": "Devam Ediyor",
+      "type": "Yarı Zamanlı",
+      "id": "ec72d702-ff65-46e4-bc4c-0ee6d3660913",
+      "date": 1715607078538
+    },
+    {
+      "position": "Data Scientist",
+      "company": "Microsoft",
+      "location": "Menlo Park",
+      "status": "Mülakat",
+      "type": "Tam Zamanlı",
+      "id": "7fb211e4-a53e-4804-b949-9a3d25b8e67c",
+      "date": 1712608152577
     }
   ]
 }

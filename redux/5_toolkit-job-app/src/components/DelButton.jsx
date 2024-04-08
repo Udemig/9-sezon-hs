@@ -1,15 +1,34 @@
-const DelButton = () => {
+import { deleteJob } from '../app/slices/jobSlice';
+import api from '../utils/api';
+import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
+
+const DelButton = ({ id }) => {
+  const dispatch = useDispatch();
+
+  const handleClick = () => {
+    if (confirm('Sİlmek istediğinizden emin misiniz?')) {
+      api
+        .delete(`/jobs/${id}`)
+        .then(() => {
+          dispatch(deleteJob(id));
+          toast.warn('Başvuru kaldırıldı');
+        })
+        .catch(() => toast.error('Kaldırma işleminde bir sorun oluştu'));
+    }
+  };
+
   return (
-    <button class="bin-button">
+    <button onClick={handleClick} className="bin-button">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 39 7"
-        class="bin-top"
+        className="bin-top"
       >
-        <line stroke-width="4" stroke="white" y2="5" x2="39" y1="5"></line>
+        <line strokeWidth="4" stroke="white" y2="5" x2="39" y1="5"></line>
         <line
-          stroke-width="3"
+          strokeWidth="3"
           stroke="white"
           y2="1.5"
           x2="26.0357"
@@ -21,7 +40,7 @@ const DelButton = () => {
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 33 39"
-        class="bin-bottom"
+        className="bin-bottom"
       >
         <mask fill="white" id="path-1-inside-1_8_19">
           <path d="M0 0H33V35C33 37.2091 31.2091 39 29 39H4C1.79086 39 0 37.2091 0 35V0Z"></path>
@@ -31,14 +50,14 @@ const DelButton = () => {
           fill="white"
           d="M0 0H33H0ZM37 35C37 39.4183 33.4183 43 29 43H4C-0.418278 43 -4 39.4183 -4 35H4H29H37ZM4 43C-0.418278 43 -4 39.4183 -4 35V0H4V35V43ZM37 0V35C37 39.4183 33.4183 43 29 43V35V0H37Z"
         ></path>
-        <path stroke-width="4" stroke="white" d="M12 6L12 29"></path>
-        <path stroke-width="4" stroke="white" d="M21 6V29"></path>
+        <path strokeWidth="4" stroke="white" d="M12 6L12 29"></path>
+        <path strokeWidth="4" stroke="white" d="M21 6V29"></path>
       </svg>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 89 80"
-        class="garbage"
+        className="garbage"
       >
         <path
           fill="white"

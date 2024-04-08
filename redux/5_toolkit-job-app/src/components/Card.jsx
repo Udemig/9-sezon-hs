@@ -25,7 +25,7 @@ const Card = ({ job }) => {
         </section>
 
         <section>
-          <DelButton />
+          <DelButton id={job.id} />
         </section>
       </div>
 
@@ -42,7 +42,7 @@ const Card = ({ job }) => {
 
         <div className="field">
           <BsFillCalendarDateFill />
-          <p>{job.date}</p>
+          <p>{new Date(job.date).toLocaleDateString()}</p>
         </div>
 
         <div className="status">

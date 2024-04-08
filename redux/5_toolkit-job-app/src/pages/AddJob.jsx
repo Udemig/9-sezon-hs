@@ -6,6 +6,8 @@ import api from '../utils/api';
 import { createJob } from '../app/slices/jobSlice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Select from '../components/Select';
+import SubmitButton from '../components/SubmitButton';
 
 const AddJob = () => {
   const dispatch = useDispatch();
@@ -23,7 +25,7 @@ const AddJob = () => {
 
     // tarih ve id ekle
     newJobData.id = v4();
-    newJobData.date = new Date().toLocaleDateString();
+    newJobData.date = Date.now();
 
     // api'a yeni veriyi kaydet
     api
@@ -56,39 +58,11 @@ const AddJob = () => {
           <AutoInput label={'Şirket'} name={'company'} />
           <AutoInput label={'Lokasyon'} name={'location'} />
 
-          <div>
-            <label>Durum</label>
-            <select required name="status">
-              <option selected hidden value="">
-                Seçiniz
-              </option>
-              {statusOpt.map((i) => (
-                <option value={i}>{i}</option>
-              ))}
-            </select>
-          </div>
+          <Select label={'Durum'} options={statusOpt} name={'status'} />
+          <Select label={'Tür'} options={typeOpt} name={'type'} />
 
           <div>
-            <label>Tür</label>
-            <select required name="type">
-              <option selected hidden value="">
-                Seçiniz
-              </option>
-              {typeOpt.map((i) => (
-                <option value={i}>{i}</option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <button className="submit-btn">
-              <span class="circle1"></span>
-              <span class="circle2"></span>
-              <span class="circle3"></span>
-              <span class="circle4"></span>
-              <span class="circle5"></span>
-              <span class="text">Oluştur</span>
-            </button>
+            <SubmitButton text={'Oluştur'} />
           </div>
         </form>
       </section>

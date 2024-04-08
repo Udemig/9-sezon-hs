@@ -2,13 +2,13 @@
   min-height: 90vh;
   display: grid;
   place-items: center;
+}
 
-  .container {
-    width: 70vw;
-    max-width: 700px;
-    box-shadow: 0 0 55px 0 rgb(226, 68, 160);
-    padding: 25px;
-  }
+.container {
+  width: 70vw;
+  max-width: 700px;
+  box-shadow: 0 0 55px 0 rgb(226, 68, 160);
+  padding: 25px;
 
   form {
     display: grid;
@@ -34,4 +34,9 @@
       place-items: center;
     }
   }
+}
+
+.filter-sec {
+  @extend .container;
+  margin: 30px auto 80px;
 }

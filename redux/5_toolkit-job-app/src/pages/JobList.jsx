@@ -2,12 +2,15 @@ import { useSelector } from 'react-redux';
 import Loader from './../components/Loader';
 import Error from './../components/Error';
 import Card from '../components/Card';
+import Filter from '../components/Filter';
 
 const JobList = ({ retry }) => {
   const { jobs, error, isLoading } = useSelector((store) => store);
 
   return (
     <div className="list-page">
+      <Filter />
+
       {isLoading ? (
         <Loader />
       ) : error ? (
