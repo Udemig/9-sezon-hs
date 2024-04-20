@@ -1,22 +1,10 @@
 {
   "todos": [
     {
-      "id": "7294cc12-d56f-4192-af20-9d669152ef94",
-      "text": "js çalış",
-      "is_done": false,
-      "created_at": "25.03.2024"
-    },
-    {
-      "id": "3d5c3667-e101-40de-985e-efe3596e1a82",
-      "text": "firebase öğren",
-      "is_done": false,
-      "created_at": "25.03.2024"
-    },
-    {
       "id": "0dfaf6cf-696a-4731-98a6-1af8019cf7f5",
-      "text": "MVC projesi yap",
+      "text": "MVC projesi1234 yap",
       "is_done": true,
-      "created_at": "25.03.2024"
+      "created_at": "18.04.2024"
     },
     {
       "id": "bd37d315-9624-428a-a06b-56cc966e2c13",
@@ -47,6 +35,12 @@
       "text": "asd",
       "is_done": false,
       "created_at": "26.03.2024"
+    },
+    {
+      "id": "5a04d3ea-52e1-4d53-b075-4f343e3cee1b",
+      "text": "yeni eleman",
+      "is_done": false,
+      "created_at": "18.04.2024"
     }
   ]
 }
