@@ -297,13 +297,22 @@
   ],
   "cart": [
     {
-      "id": "40d16140-2aaf-4a25-a4d0-e80b6e0ca422",
-      "productId": "1",
-      "title": "Izgara Somon",
-      "price": 45.99,
-      "photo": "https://picsum.photos/200",
-      "restaurantName": "Lezzetin Tadı",
-      "amount": 2
+      "id": "694fb7bc-d49b-4c16-907d-1db9563b1227",
+      "productId": "42",
+      "title": "Margarita Pizza",
+      "price": 12.99,
+      "photo": "https://picsum.photos/211",
+      "restaurantName": "Aromalı Ev",
+      "amount": 1
+    },
+    {
+      "id": "18b6be28-6b5a-4864-b61f-e660bb362e23",
+      "productId": "12",
+      "title": "Çıtır Tavuk Kanadı",
+      "price": 9.99,
+      "photo": "https://picsum.photos/211",
+      "restaurantName": "Aromalı Ev",
+      "amount": 1
     }
   ]
 }
