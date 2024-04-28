@@ -151,5 +151,39 @@ button {
 }
 
 .chat-page main {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  gap: 10px;
+  padding: 10px;
   flex: 1;
+}
+
+.msg-other {
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    img {
+      width: 40px;
+      border-radius: 50%;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.msg-user {
+  background: #f99417;
+  align-self: flex-end;
+  padding: 4px 8px;
+  border-radius: 7px 7px 0 7px;
 }

@@ -2,12 +2,15 @@ import {
   collection,
   addDoc,
   serverTimestamp,
-  getDocs,
   onSnapshot,
+  query,
+  where,
+  orderBy,
 } from 'firebase/firestore';
 import { auth, db } from './../firebase/config';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Message from '../components/Message';
 
 const ChatPage = ({ room, setRoom }) => {
   const [messages, setMessages] = useState([]);
@@ -40,8 +43,15 @@ const ChatPage = ({ room, setRoom }) => {
     // hangi kolleksiyondaki verileri istiyorsak o kolleksiyonun referansını alırız
     const messagesCol = collection(db, 'messages');
 
+    // sorgu oluştur
+    const q = query(
+      messagesCol,
+      where('room', '==', room), //mevcut odadaki mesajları fitrele
+      orderBy('createdAt', 'asc') //en eskiden yeniye sırala
+    );
+
     // kolleksiyondaki verileri al
-    onSnapshot(messagesCol, (snapshot) => {
+    onSnapshot(q, (snapshot) => {
       // verilerin geçici olarak tutulcağı dizi
       const tempMsg = [];
 
@@ -55,6 +65,8 @@ const ChatPage = ({ room, setRoom }) => {
     });
   }, []);
 
+  console.log(messages);
+
   return (
     <div className="chat-page">
       <header>
@@ -63,7 +75,11 @@ const ChatPage = ({ room, setRoom }) => {
         <button onClick={() => setRoom(null)}>Farklı Oda</button>
       </header>
 
-      <main>mesajlar</main>
+      <main>
+        {messages.map((data, i) => (
+          <Message key={i} data={data} />
+        ))}
+      </main>
 
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="mesajınızı yazınız..." />
