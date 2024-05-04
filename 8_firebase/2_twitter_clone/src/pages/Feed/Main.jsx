@@ -21,7 +21,7 @@ const Main = ({ user }) => {
       const temp = [];
 
       // belgelerin içerisndeki verilere erişip bir diziye aktardık
-      snapshot.docs.forEach((doc) => temp.push(doc.data()));
+      snapshot.docs.forEach((doc) => temp.push({ id: doc.id, ...doc.data() }));
 
       // state'e aktar
       setTweets(temp);
