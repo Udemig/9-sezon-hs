@@ -4,7 +4,7 @@ import Toppings from './components/Toppings';
 
 const App = () => {
   return (
-    <div className="bg-black vh-100 text-light p-3 py-5">
+    <div className="bg-black min-vh-100 text-light p-3 py-5">
       <div className="container">
         <Scoops />
         <Toppings />
