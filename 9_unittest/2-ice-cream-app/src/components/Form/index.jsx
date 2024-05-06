@@ -5,7 +5,7 @@ const Form = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <form className="my-5 mb-4 d-flex justify-content-center align-items-center gap-3">
+    <form className="my-5 mb-5 d-flex justify-content-center align-items-center gap-3">
       <input
         onChange={(e) => setIsChecked(e.target.checked)}
         id="terms"
