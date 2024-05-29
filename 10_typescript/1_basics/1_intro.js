@@ -1,3 +1,4 @@
+"use strict";
 /*
  * Typescript, js'in bazı önzemli açıklarını düzeltmek için Microsoft tarafından geliştirilen bir programlama dilidir.
 
@@ -19,5 +20,5 @@
   * * Yazılan typescript kodunu js'in istediğimiz sürümüne derler.
   * * Kullanabilmek için typescript paketini pc'ye indirmiş olmamız gerekli
 */
-var username = 'furkan';
+let username = 'furkan';
 console.log('Kullanıcının adı', username);

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const Form = () => {
   const [isHover, setIsHover] = useState(false);
@@ -16,7 +16,7 @@ const Form = () => {
       <div className="terms-wrapper">
         <p
           style={{
-            visibility: isHover ? 'visible' : 'hidden',
+            visibility: isHover ? "visible" : "hidden",
           }}
         >
           Size gerçekten bir şey teslim etmeyeceğiz

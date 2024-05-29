@@ -1,3 +1,4 @@
+"use strict";
 /*
  * OOP (OBJECT ORIANTED PROGRAMMING - Nesne Tabanlı Programlama)
 
@@ -12,8 +13,8 @@
  * Sıkça karşılacağımız terimler
  * Class | Interface | Extends | InstanceOf | Implements
 */
-var Old_Phone = /** @class */ (function () {
-    function Old_Phone() {
+class Old_Phone {
+    constructor() {
         // Buraası class'on gövdesidir. Buraya property ve methodlar gelir
         // Örnek property (özellik) leri aşşağıya yazalım
         this.telefon_tipi = "entegre";
@@ -21,19 +22,18 @@ var Old_Phone = /** @class */ (function () {
         this.govde = "yatay";
     }
     // Örnek methodları aşşağıya yazalım
-    Old_Phone.prototype.ahizeAc = function () {
+    ahizeAc() {
         console.log("Ahize açılıyor....");
-    };
-    Old_Phone.prototype.numaraCevir = function (telNum) {
+    }
+    numaraCevir(telNum) {
         console.log(this.tus_takimi === "döner" ? "Numara Çevriliyor" : "Numara tuşlanıyor");
         console.log("Telefon çalıyor");
         return true;
-    };
-    Old_Phone.prototype.ahizeKapat = function () {
+    }
+    ahizeKapat() {
         console.log("Ahize kapatılıyor");
-    };
-    return Old_Phone;
-}());
+    }
+}
 /*
  * Class'ların kullanımı
  * Bir class'ı tanımlamak aynı bir type'ı veya fonksiyonu tanımlamak gibidir.
@@ -44,7 +44,70 @@ var Old_Phone = /** @class */ (function () {
  * Class'ları bir fırındaki kalıba benzetebiliriz
  * Aynı özellikelere sahip nesneler üretmek iiçin kalıp görevi görür
 */
-var antikaTelefon = new Old_Phone();
-var antikaTelefon2 = new Old_Phone();
-var antikaTelefon3 = new Old_Phone();
+const antikaTelefon = new Old_Phone();
+const antikaTelefon2 = new Old_Phone();
+const antikaTelefon3 = new Old_Phone();
 console.log(antikaTelefon);
+antikaTelefon.ahizeAc();
+antikaTelefon.numaraCevir("05556667788");
+antikaTelefon.ahizeKapat();
+/*
+ * Obje ve Class arasında ilişki şu şekildedir
+
+ * Class'lar tanımlanmış olan ifadelerdir objeler ise bu tanımlanmış ifadelerin çalışan halidir.
+
+ * Class'lar bilgisayarın RAM'inde yer kaplamaz ama objeler için RAM'de yer ayrılır
+
+ * Bir fırın benzetmesi yapabilir: Fırındaki ekemek kalıbı bir class ise bu kalıptan çıkan ekmekler objelerdir.
+
+ * JSON Objesi ile Class objesi:
+ 
+ * Her ikiside birer obje (nesnedir)
+
+ * Class objelerinni bir ismi vardır
+ * Json objelerinde bu yoktur (anonimdir)
+ 
+ * Json objelerinde objenin type'ını yazarız
+ * Class objelerinde buna gerek kalmaz
+ 
+ * JSON objeleri arasında miras alma olmaz
+ * Class'lar arasında olabilir.
+*/
+// json objesi
+const json_object = {
+    name: "eski telefon",
+    tus_takim: "entegre",
+};
+// class objesi
+const class_object = new Old_Phone();
+console.log("json objesi", json_object);
+console.log("class objesi", class_object);
+/*
+ * this kullanımı
+ * bir class'ın birden fazla kopyası (obje) oluşturlabilir.
+ * ve her objenin kendine ait özellik ve methodları bulunur.
+ * Objenin kendi içerisndeki özelliklerine erişebilmesi için this anahtar kelimesi kullanılır.
+ * Bu sayede objedeki bir method içerisnden objeinin sahip olduğu özelliklere erişebiliriz.
+ */
+class Modal {
+    constructor() {
+        this.baslik = "";
+        this.acilma_sayisi = 0;
+        this.acik_mi = false;
+    }
+    modal_ac(yeniBaslik) {
+        this.baslik = yeniBaslik;
+        this.acilma_sayisi = this.acilma_sayisi + 1;
+        this.acik_mi = true;
+    }
+    modal_kapat() {
+        this.acik_mi = false;
+        this.baslik = "";
+    }
+}
+const uyariModal = new Modal();
+console.log("önce>>>>", uyariModal);
+uyariModal.modal_ac("Günlük saat sınırını aştınız");
+console.log("açıkken>>>>", uyariModal);
+uyariModal.modal_kapat();
+console.log("son>>>>>", uyariModal);
